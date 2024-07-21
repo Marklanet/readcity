@@ -1,0 +1,63 @@
+.auth-logic{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-logic .welcome-wrapper{
+    height: 100%;
+    width: 50%;
+    z-index: 99;
+}
+
+.auth-logic .form-switcher{
+    width: 50%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+
+@media screen and (max-width: 600px) {
+    .auth-logic .welcome-wrapper{
+        height: 100%;
+        width: 60%;
+    }
+    
+    .auth-logic .form-switcher{
+        width: 80%;
+        margin-left: -50%;
+       
+    
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .auth-logic{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .auth-logic .welcome-wrapper{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .auth-logic .form-switcher{
+       
+        margin-left: 5%;
+        margin-right: 0;
+        margin: auto;
+        width: max-content;
+        max-width: 100%;
+        position: absolute;
+       
+    
+    }
+}

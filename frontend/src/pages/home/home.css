@@ -1,0 +1,252 @@
+.all-page {
+    padding: 2rem 2.5rem;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-page .right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.all-page .left {
+    width: 50%;
+    height: 100%;
+    padding: 0 1rem 0 0;
+    position: relative;
+}
+
+.all-page .right .back {
+    height: 100%;
+    width: 100%;
+}
+
+.all-page .right .back img {
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.all-page .cover {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.all-page .right .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 40, 72, .129);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-page .right .icon {
+    color: var(--dark-color);
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.all-page .right .icon:hover {
+    color: var(--middle-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.search-input-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.search-icon, .clear-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-icon {
+    left: 10px;
+}
+
+.clear-icon {
+    right: 10px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border-radius: 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    width: max-content;
+    background-color: var(--dark-color);
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0 0 0 10px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.suggestions {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background: #f0f0f0;
+}
+
+.result-holder {
+    margin-top: 20px;
+    overflow-y: auto;
+    height: calc(100% - 80px); /* Adjusted height to fit in the container */
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .all-page {
+        
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .all-page {
+        padding: 1rem 1rem;
+        height: 85vh;
+    }
+
+    .all-page .right {
+        width: 60%;
+        height: 100%;
+        position: relative;
+    }
+
+    .all-page .left {
+        width: 40%;
+        height: 100%;
+        padding: 0 0 0 1rem;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .all-page {
+        padding: 1rem 0rem;
+        height: 85vh;
+        position: relative;
+        margin: 0;
+    }
+
+    .all-page .left {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        margin: 1rem 0 0 0;
+        position: absolute;
+    }
+
+    .all-page .right {
+        width: 100%;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    .all-page .right.hide {
+        display: none;
+    }
+    .all-page .cover.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .all-page .right.show-on-top {
+        position: fixed;
+        top: 15vh;
+        left: 0;
+        width: 95%;
+        margin-left: 2.5%;
+        height: 50vh; 
+        z-index: 20; 
+        background-color: white; 
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .search-bar {
+        
+        width: 100%;
+        margin-left: 0%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+    }
+  
+    
+}
+
+
+@media only screen and (max-width: 480px) {
+    .all-page .right.show-on-top {
+        position: fixed;
+        top: 11vh;
+        left: 0;
+        width: 95%;
+        margin-left: 2.5%;
+        height: 50vh; 
+        z-index: 20; 
+        background-color: white; 
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

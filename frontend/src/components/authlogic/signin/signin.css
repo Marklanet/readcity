@@ -1,0 +1,72 @@
+.sign-in-form{
+    background-color: var(--white-color);
+    padding: 2.5rem;
+    border-radius: 10px;
+    min-width:60%;
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.2); 
+}
+.sign-in-form .divider-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sign-in-form .line {
+    flex: 1;
+
+    border-bottom: 1px solid hsl(var(--border));
+  
+}
+
+.sign-in-form  .or {
+    white-space: nowrap;
+    margin: 0 10px;
+}
+
+.sign-in-form .social-sign{
+    border: 1px solid hsl(var(--border));
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    cursor: pointer;
+ 
+}
+.sign-in-form .social-sign:hover{
+   background-color:  hsl(var(--secondary));
+ 
+}
+.sign-in-form .words{
+    margin: 0.3rem 0 1rem 0
+}
+.sign-in-form .words span{
+    color: var(--dark-color);
+    cursor: pointer;
+
+}
+.sign-in-form .icon{
+    margin-right: 10px;
+    
+}
+
+.sign-in-form .input-field{
+    width: 100%;
+    margin-bottom: 1rem;
+    
+}
+.sign-in-form .variable{
+    margin: 0.5rem 0 0.3rem 0
+}
+.sign-in-form .input-field input{
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.7rem 1.2rem;
+    margin-top: 0.2rem;
+    border: 1px solid hsl(var(--border));
+    
+}
+.sign-in-form .dark-btn{
+    width: 100% !important;
+}

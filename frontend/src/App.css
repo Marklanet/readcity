@@ -1,0 +1,90 @@
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-between-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-btn{
+    width: max-content;
+    background-color: var(--dark-color);
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 5px;
+    color: var(--white-color);
+    text-transform:capitalize;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.light-btn{
+    width: max-content;
+    background-color: var(--white-color);
+    border: 1px solid hsl(var(--input));
+    outline: none;
+    height: 40px;
+    border-radius: 5px;
+    color: var(--dark-color);
+    text-transform:capitalize;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.container{
+    background-color: inherit;
+    width: 100%;
+    min-height: 100%;
+    padding: 4vh 2.5rem 5vh 2.5rem;
+   
+ }
+ @media only screen and (max-width: 768px) {
+  
+    .container{
+        padding: 0.5vh 2% 0 2%;
+    
+    }}
+ @media only screen and (max-width: 480px) {
+  
+    .container{
+        padding: 1vh 3% 0 3%;
+    
+    }
+    
+.dark-btn{
+    height: 35px;
+    margin: 5px 0;
+    padding: 0 15px;
+}
+.light-btn{
+    height: 35px;
+    margin: 5px 0;
+    padding: 0 15px;
+    margin-left: 10px;
+}
+   
+ }
